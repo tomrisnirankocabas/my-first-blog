@@ -6,11 +6,13 @@
      <div>
        <h1><a href="">Niran'ın Bloğu</a></h1>
      </div>
+     {% for post in posts %}
+    <div>
+        <p>published: {{ post.yayinlama_tarihi }}</p>
+        <h1><a href="">{{ post.baslik }}</a></h1>
+        <p>{{ post.yazi|linebreaks }}</p>
+    </div>
+{% endfor %}
 
-     <div>
-        <p>published: 09/04/2016, 17:15</p>
-        <h2><a href="">Gerçek Gazlar İçin İdeal Denklemdeki Düzeltmeler</a></h2>
-        <p>İdeal Denklemde temel olarak iki düzeltme vardır;bunlardan biri gaz moleküllerinin hacmi,diğeri ise gaz molekülleri arasındaki çekim kuvvetidir. </p>
-      </div>
   </body>
 </html>
